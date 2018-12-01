@@ -26,7 +26,7 @@ int main() {
 
 
     server.sin_addr.s_addr = INADDR_ANY; // defined in <in.h> as ((in_addr_t) 0x00000000)
-    bzero(&(server.sin_zero),8); //set to '\0', it could have been done with memset()
+    bzero(&(server.sin_zero),8); // set to '\0', it could have been done with memset()
 
     bind(fDesc1, (struct sockaddr *)&server, sizeof(struct sockaddr)); // bind the socket info with file descriptor
 
